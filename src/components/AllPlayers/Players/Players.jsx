@@ -6,8 +6,10 @@ const Players = ({
   selected,
   handleSelected,
   handleMoney,
+  data,
+  setData,
 }) => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   useEffect(() => {
     fetch("fakedata.json")
       .then((res) => res.json())

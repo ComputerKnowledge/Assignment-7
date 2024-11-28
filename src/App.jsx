@@ -12,6 +12,7 @@ export default function App() {
     cart: true,
     status: "available",
   });
+  const [data, setData] = useState([]);
   const [money, setMoney] = useState(0);
   const [selected, setSelected] = useState([]);
 
@@ -49,6 +50,8 @@ export default function App() {
       <Header handleMoney={handleMoney}></Header>
       {isActive.cart ? (
         <Players
+          setData={setData}
+          data={data}
           handleMoney={handleMoney}
           handleSelected={handleSelected}
           selected={selected}
@@ -57,6 +60,7 @@ export default function App() {
         ></Players>
       ) : (
         <Selected
+          data={data}
           handleDelete={handleDelete}
           handleMoney={handleMoney}
           handleSelected={handleSelected}

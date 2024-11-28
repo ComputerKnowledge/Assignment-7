@@ -6,22 +6,28 @@ const Selected = ({
   selected,
   handleMoney,
   handleDelete,
+  data,
 }) => {
   return (
     <div>
-      <div className="flex">
-        <button
-          className={`${isActive.cart && "bg-red-500"}`}
-          onClick={() => handleClick("available")}
-        >
-          Available
-        </button>
-        <p
-          className={`${isActive.cart || "bg-green-500"}`}
-          onClick={() => handleClick("selected")}
-        >
-          Selected({selected.length})
+      <div className="flex justify-between">
+        <p>
+          Available Players ({data.length}/{selected.length} )
         </p>
+        <div className="flex">
+          <button
+            className={`${isActive.cart && "bg-red-500"}`}
+            onClick={() => handleClick("available")}
+          >
+            Available
+          </button>
+          <p
+            className={`${isActive.cart || "bg-green-500 cursor-pointer"}`}
+            onClick={() => handleClick("selected")}
+          >
+            Selected({selected.length})
+          </p>
+        </div>
       </div>
       {selected.map((player) => (
         <SelectedPlayers
@@ -31,6 +37,9 @@ const Selected = ({
           handleMoney={handleMoney}
         ></SelectedPlayers>
       ))}
+      <button onClick={() => handleClick("available")} className="bg-green-500">
+        Add More Player
+      </button>
     </div>
   );
 };
