@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Mehta",
+    "country": "India",
+    "handy": "Left-Hand-Bat",
+    "price": 1200000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Liam Carter",
+    "country": "Australia",
+    "handy": "Left-Hand-Bat",
+    "price": 950000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Noah Patel",
+    "country": "England",
+    "handy": "Left-Hand-Bat",
+    "price": 1350000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Zane Mathews",
+    "country": "South Africa",
+    "handy": "Left-Hand-Bat",
+    "price": 1100000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ethan Kim",
+    "country": "New Zealand",
+    "handy": "Left-Hand-Bat",
+    "price": 850000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Leo Fernandes",
+    "country": "West Indies",
+    "handy": "Left-Hand-Bat",
+    "price": 1250000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Kai Tanaka",
+    "country": "Japan",
+    "handy": "Left-Hand-Bat",
+    "price": 500000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Arjun Thakur",
+    "country": "India",
+    "handy": "Left-Hand-Bat",
+    "price": 1500000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Oscar Gonzalez",
+    "country": "Spain",
+    "handy": "Left-Hand-Bat",
+    "price": 600000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Max Dupont",
+    "country": "France",
+    "handy": "Left-Hand-Bat",
+    "price": 700000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Riley Morgan",
+    "country": "USA",
+    "handy": "Left-Hand-Bat",
+    "price": 800000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Theo Khan",
+    "country": "Pakistan",
+    "handy": "Left-Hand-Bat",
+    "price": 1300000,
+    "type": "All-Rounder",
+    "img": "img.jpg"
+  }
+]
