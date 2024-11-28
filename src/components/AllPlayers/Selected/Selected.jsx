@@ -8,6 +8,7 @@ const Selected = ({
   handleDelete,
   data,
 }) => {
+  console.log(selected);
   return (
     <div>
       <div className="flex justify-between">

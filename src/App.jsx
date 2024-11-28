@@ -19,18 +19,83 @@ export default function App() {
   const [selected, setSelected] = useState([]);
 
   const handleSelected = (playerInfo) => {
-    setMoney(money - playerInfo.price);
-    const newArray = [...selected, playerInfo];
-    setSelected(newArray);
+    const isSelected = !!selected.find((a) => a.id == playerInfo.id);
+    // console.log(isSelected);
+
+    if (selected.length < 6 && !isSelected && money >= playerInfo.price) {
+      setMoney(money - playerInfo.price);
+      const newArray = [...selected, playerInfo];
+      setSelected(newArray);
+      toast.success("Player has been added.", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      if (selected.length >= 6) {
+        toast.error("More that 6 player is not allowed.", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else if (isSelected) {
+        toast.error("This player is already selected.", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else if (money < playerInfo.price) {
+        toast.error("Don't have enough money", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    }
+
+    // setMoney(money - playerInfo.price);
+    // const newArray = [...selected, playerInfo];
+    // setSelected(newArray);
+    console.log(isSelected);
   };
   const handleDelete = (p) => {
     setMoney(money + p.price);
     const newArray = selected.filter((player) => player != p);
     setSelected(newArray);
+    toast.info(`${p.name} has been removed.`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const handleMoney = () => {
-    setMoney(money + 600000);
+    setMoney(money + 6000000);
     toast.success("Money Added", {
       position: "top-center",
       autoClose: 2000,

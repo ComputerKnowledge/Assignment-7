@@ -9,7 +9,8 @@ const Players = ({
   data,
   setData,
 }) => {
-  // const [data, setData] = useState([]);
+  console.log(selected);
+
   useEffect(() => {
     fetch("fakedata.json")
       .then((res) => res.json())
