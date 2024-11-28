@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Players from "./components/AllPlayers/Players/Players";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -29,6 +31,16 @@ export default function App() {
 
   const handleMoney = () => {
     setMoney(money + 600000);
+    toast.success("Money Added", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const handleClick = (status) => {
@@ -46,6 +58,19 @@ export default function App() {
   };
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
       <Navber money={money}></Navber>
       <Header handleMoney={handleMoney}></Header>
       {isActive.cart ? (
