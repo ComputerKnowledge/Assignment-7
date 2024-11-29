@@ -1,4 +1,4 @@
-# <img width="30px" src="assets/logo.png"/> BPL-DREAM 11 (Assignment-7)
+# <img width="30px" src="/logo.png"/> BPL-DREAM 11 (Assignment-7)
 
 This is a **simple react-based project** where users can select and manage cricket players for a team. A nice UI has been designed. Many functionality like handle player selection, cion limitations, more than 6 player restriction, one player just one time only etc have been added. React-Toastify has been used for showing beautiful alert.
 
