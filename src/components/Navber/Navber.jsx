@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 const Navbar = ({ money }) => {
   const [isClick, setIsClick] = useState(false);
@@ -13,14 +14,13 @@ const Navbar = ({ money }) => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           <div className="">
-            <img src="/src/assets/logo.png" alt="Logo" className="w-auto" />
+            <img src="/logo.png" alt="Logo" className="w-auto" />
           </div>
 
-          {/* Hamburger Button (Mobile)  +   Coin display*/}
           <div className="flex items-center justify-center gap-4">
             <div className="sm:hidden flex gap-2 border-2 border-black py-1 px-3 rounded-md">
               <p>{money} coin</p>
-              <img src="/src/assets/dollar.png" alt="" className="w-6" />
+              <img src="/coin.png" alt="" className="w-6" />
             </div>
             <div className="sm:hidden">
               <button onClick={toggleMenu} className="text-gray-800 pt-2">
@@ -29,7 +29,6 @@ const Navbar = ({ money }) => {
             </div>
           </div>
 
-          {/* Navigation Links */}
           <div className="hidden items-center sm:flex  gap-6">
             <div className="hidden sm:flex space-x-6">
               <a
@@ -64,7 +63,6 @@ const Navbar = ({ money }) => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isClick ? (
           <div className="sm:hidden text-right">
             <a
@@ -123,6 +121,10 @@ const Navbar = ({ money }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  money: PropTypes.number,
 };
 
 export default Navbar;

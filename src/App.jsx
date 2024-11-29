@@ -138,7 +138,7 @@ export default function App() {
       />
       <Navbar money={money}></Navbar>
       <Header handleMoney={handleMoney}></Header>
-      {/* {isActive.cart ? (
+      {isActive.cart ? (
         <Players
           setData={setData}
           data={data}
@@ -158,9 +158,11 @@ export default function App() {
           isActive={isActive}
           handleClick={handleClick}
         ></Selected>
-      )} */}
-      {/* <Newslatter></Newslatter> */}
-      {/* <Footer></Footer> */}
+      )}
+      <div className="relative">
+        <Newslatter></Newslatter>
+        <Footer></Footer>
+      </div>
     </>
   );
 }
