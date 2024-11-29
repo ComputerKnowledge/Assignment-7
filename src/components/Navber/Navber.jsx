@@ -1,33 +1,128 @@
-const Navber = ({ money }) => {
+import { useState } from "react";
+import { FaBars } from "react-icons/fa";
+
+const Navbar = ({ money }) => {
+  const [isClick, setIsClick] = useState(false);
+
+  const toggleMenu = () => {
+    setIsClick(!isClick);
+  };
+
   return (
-    <div className="flex justify-between items-center">
-      <div>
-        <img src="/src/assets/logo.png" alt="LOGO" />
-      </div>
-      <div>
-        <ul className="flex gap-4 font-bold text-gray-500 items-center">
-          <li className="px-4">
-            <a href="">Home</a>
-          </li>
-          <li className="px-4">
-            <a href="">Fixture</a>
-          </li>
-          <li className="px-4">
-            <a href="">Teams</a>
-          </li>
-          <li className="px-4">
-            <a href="">Schedules</a>
-          </li>
-          <li className="px-4">
-            <div className="text-black border border-black py-2 px-4 flex gap-2 rounded-lg">
-              <p>{money} Coin</p>
-              <img className="w-5 h-5" src="/src/assets/dollar.png" alt="" />
+    <nav>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center">
+          <div className="">
+            <img src="/src/assets/logo.png" alt="Logo" className="w-auto" />
+          </div>
+
+          {/* Hamburger Button (Mobile)  +   Coin display*/}
+          <div className="flex items-center justify-center gap-4">
+            <div className="sm:hidden flex gap-2 border-2 border-black py-1 px-3 rounded-md">
+              <p>{money} coin</p>
+              <img src="/src/assets/dollar.png" alt="" className="w-6" />
             </div>
-          </li>
-        </ul>
+            <div className="sm:hidden">
+              <button onClick={toggleMenu} className="text-gray-800 pt-2">
+                <FaBars></FaBars>
+              </button>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="hidden items-center sm:flex  gap-6">
+            <div className="hidden sm:flex space-x-6">
+              <a
+                href="#"
+                className="text-gray-800 md:px-1 lg:px-2 py-2 rounded-md font-medium"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-800 md:px-1 lg:px-2 py-2 rounded-md font-medium"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                className="text-gray-800 md:px-1 lg:px-2 py-2 rounded-md font-medium"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="text-gray-800 md:px-1 lg:px-2 py-2 rounded-md font-medium"
+              >
+                Contact
+              </a>
+            </div>
+            <div className="hidden sm:flex gap-2 border-2 border-black py-1 px-3 rounded-md">
+              <p>{money} coin</p>
+              <img src="/src/assets/dollar.png" alt="" className="w-6" />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isClick ? (
+          <div className="sm:hidden text-right">
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Contact
+            </a>
+          </div>
+        ) : (
+          <div className="hidden text-right">
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="block w-28 ml-auto bg-gray-200  text-right px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Contact
+            </a>
+          </div>
+        )}
       </div>
-    </div>
+    </nav>
   );
 };
 
-export default Navber;
+export default Navbar;

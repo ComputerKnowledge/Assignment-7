@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Players from "./components/AllPlayers/Players/Players";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Navber from "./components/Navber/Navber";
+import Navbar from "./components/Navber/Navber";
 import Newslatter from "./components/Newslatter/Newslatter";
 import Selected from "./components/AllPlayers/Selected/Selected";
 
@@ -136,9 +136,9 @@ export default function App() {
         theme="light"
         transition:Bounce
       />
-      <Navber money={money}></Navber>
+      <Navbar money={money}></Navbar>
       <Header handleMoney={handleMoney}></Header>
-      {isActive.cart ? (
+      {/* {isActive.cart ? (
         <Players
           setData={setData}
           data={data}
@@ -158,9 +158,9 @@ export default function App() {
           isActive={isActive}
           handleClick={handleClick}
         ></Selected>
-      )}
-      <Newslatter></Newslatter>
-      <Footer></Footer>
+      )} */}
+      {/* <Newslatter></Newslatter> */}
+      {/* <Footer></Footer> */}
     </>
   );
 }
