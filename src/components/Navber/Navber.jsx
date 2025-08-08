@@ -58,7 +58,7 @@ const Navbar = ({ money }) => {
             </div>
             <div className="hidden sm:flex gap-2 border-2 border-black py-1 px-3 rounded-md">
               <p>{money} coin</p>
-              <img src="/src/assets/dollar.png" alt="" className="w-6" />
+              <img src="/coin.png" alt="" className="w-6" />
             </div>
           </div>
         </div>
